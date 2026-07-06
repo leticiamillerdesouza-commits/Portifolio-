@@ -1,0 +1,46 @@
+CREATE TABLE dentista ( 
+id_dentista INT AUTO_INCREMENT PRIMARY KEY,
+nome varchar(100) NOT NULL,
+CRO varchar(20) UNIQUE NOT NULL,
+telefone varchar(20)
+);
+CREATE TABLE pacientes (
+id_pacientes INT AUTO_INCREMENT PRIMARY KEY,
+nome varchar(100) NOT NULL,
+cpf varchar(140 UNIQUE NOT NULL,
+telefone varchar(20),
+data_nascimento DATE 
+);
+CREATE TABLE consultas (
+id_consultas INT AUTO_INCREMENT PRIMARY KEY,
+id_pacientes INT,
+id_dentista INT,
+data_consulta DATETIME,
+procedimento varchar(100),
+
+FOREING KEY (id_paciente) REFERENCES pacientes(id_paciente),
+FOREING KEY (id_dentista) REFERENCES dentistas(id_desntista)
+);
+INSERT INTO dentista (nome, cro, telefone) VALUES 
+('Dra. Ana Lima', 'CRO54321', '119777777777'),
+('DR. Carlos Mendes', 'CRO67890', '11998877666'),
+('DRA. Fernanda Rocha', 'CRO11223', '11954444454');
+
+INSERT INTO pacientes (nome, cpf, telefone, data_nascimento) VALUES 
+('João Pereira', '967.654.321-00', '1133445566', '1980-03-09'),
+('Carla Martiz', '111.222.333-99', '99898989898', '1890-04-08'),
+('Lucas Oliveira', '666.777.888-90','9765432167', '1985-02-06'),
+('Beatriz Costa', '555.888.876-88', '8787875454', '1990-08-08');
+
+INSERT INTO consultas (id_pacientes , id_dentista, data_consulta, procedimento) VALUES 
+(2, 1, '2026-08-11 09:00:00', 'Restauração'),
+(3, 4, '2026-08-12 10:30:00', 'Extração'),
+(4, 3, '2026-08-13 14:00:00', 'Clareamento'),
+(5, 2, '2026-08-14 15:30:00', 'Limpeza'),
+(2, 3, '2026-08-15 08:00:00', 'Avaliação'),
+(3, 1, '2026-08-16 11:00:00', 'Canal');
+
+SELECT = FROM pacientes;
+SELECT = FROM dentista;
+SELECT = FROM consultas;
+
