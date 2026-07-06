@@ -1,0 +1,11 @@
+a= int (input("Digite o primeiro numero:"))
+b= int(input("Digite o segundo numero:"))
+print("Antes da troca:")
+print("a=", a)
+print("b=", b)
+temp=a 
+a=b
+b=temp
+print("Depois da troca:")
+print("a=", a)
+print("b=",b)
